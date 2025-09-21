@@ -19,6 +19,6 @@ while not reminder_given:
     else:
         message = "Note: " + message + ". Consider completing it when you have free time."
 
-    print("\nReminder:", message)
+    print("Reminder:", message)
 
     reminder_given = True
