@@ -22,7 +22,7 @@ def main():
     display_current_datetime()
 
     while True:
-        user_input = input("Enter the number of days to add: ")
+        user_input = input("Enter the number of days to add to the current date: ")
         try:
             days = int(user_input)
             break

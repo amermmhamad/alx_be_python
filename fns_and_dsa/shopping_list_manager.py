@@ -12,7 +12,6 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            # EXACT prompt required by checker:
             item = input("Enter the item to add: ")
             if item:
                 shopping_list.append(item)
