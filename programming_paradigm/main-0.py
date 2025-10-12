@@ -51,7 +51,7 @@ if __name__ == "__main__":
     main()
 
 
-def main():
+def main() -> None:
     if len(sys.argv) != 3:
         print("Usage: python main.py <numerator> <denominator>")
         sys.exit(1)
