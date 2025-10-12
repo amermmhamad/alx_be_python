@@ -8,6 +8,16 @@ class TestSimpleCalculator(unittest.TestCase):
         self.calc = SimpleCalculator()
 
     # --- Addition ---
+    def test_addition(self):
+        """Alias test to satisfy required method name."""
+        # Basic integer addition
+        self.assertEqual(self.calc.add(1, 2), 3)
+        # Zero and negative handling
+        self.assertEqual(self.calc.add(0, 0), 0)
+        self.assertEqual(self.calc.add(-5, 2), -3)
+        # Float handling
+        self.assertAlmostEqual(self.calc.add(2.5, 0.5), 3.0)
+
     def test_addition_basic(self):
         self.assertEqual(self.calc.add(2, 3), 5)
         self.assertEqual(self.calc.add(-1, 1), 0)
@@ -69,9 +79,10 @@ class TestSimpleCalculator(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.calc.subtract(5, "1")
         with self.assertRaises(TypeError):
-            self.calc.multiply("a", 3.5)  # "* 3" is valid string repetition; 3.5 raises TypeError
+            self.calc.multiply("a", 3.5)  # 3.5 avoids valid string repetition
         with self.assertRaises(TypeError):
             self.calc.divide("10", 2)
+
 
 if __name__ == "__main__":
     unittest.main()
